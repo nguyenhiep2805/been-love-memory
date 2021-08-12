@@ -1,0 +1,276 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.body{
+       margin:0;
+       padding:0;
+       font-family:'Roboto',sans-serif;
+       background-color:#f8f8f8;
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       flex-direction:column;
+       min-height:100vh;
+       color:rgba(0,0,0,0.653);
+       background-image:linear-gradient(120deg,#fccb90 0%,#d57eeb 100%);
+       text-shadow:0 .2px .3px rgba(0,0,0,0.353);
+       background-size:cover;
+}
+    
+.box{
+    background-color:#fff;
+    box-shadow:0 3px 6px rgba(0,0,0,.1);
+    padding:1rem;
+    width:60%;
+    border-radius:26px
+}
+
+.about{
+    display:flex;
+    align-items:center;
+    padding:0 1rem;
+    margin-bottom:3rem;
+    margin-top:10px;
+    position:relative
+}
+
+.info:first-child{
+    flex-grow:1
+}
+
+.info{
+    display:flex;
+    align-items:center
+}
+
+.info:last-child .avatar{
+    order:2
+}
+
+.info:last-child .details{
+    text-align:right
+}
+
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+}
+
+.info .details{
+    margin:0 1rem
+}
+
+.info .details p{
+    margin:4px
+}
+
+.name{
+    font-size:24px
+}
+
+.born{
+    font-weight:300
+}
+
+.time{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center
+}
+
+.time h2,.time p{
+    margin:0;
+    margin-bottom:4px
+}
+
+.time h2{
+    font-size:2.8rem
+}
+
+.time p{
+    font-size:1.5rem
+}
+
+.sup-time{
+    font-weight:300
+}
+
+.say-thank{
+    text-align:center;
+    margin-top:15px;
+    font-weight:100;
+    color:#ff6347;
+    opacity:.8;
+    margin-bottom:0
+}
+
+.title{
+    opacity:.7
+}
+
+.heart-box{
+    width: 80px;
+    height: 80px;
+}
+
+.heart{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    transform-origin: 50% 50%;
+    opacity: .8;
+    animation: heartBeat 1s ease-in-out infinite;
+}
+
+@media (max-width: 997px)
+{
+    .box{width:84%;
+        margin-bottom:2rem
+    }
+    .title{
+        margin:2rem 0 1rem;
+        font-size:18px
+    }
+    .about{
+        flex-direction:column;
+        padding:0
+    }
+    .info{
+        flex-direction:column
+    }
+    .avatar{
+        margin-bottom:.5rem
+    }
+    .info p{
+        text-align:center;
+        margin:10px 0 0;
+        font-size:13px
+    }
+    .info:last-child .avatar{
+        order:0
+    }
+
+    .say-thank{
+        margin-top:2rem
+    }
+}
+    
+a.active{
+    padding:4px 16px;
+    margin:0 6px 0 3px;
+    border-radius:100px;
+    color:#fff;
+    background:linear-gradient(-45deg,#F33,#F9F);
+    background-size:400% 400%;
+    -webkit-animation:Gradient 15s ease infinite;
+    -moz-animation:Gradient 15s ease infinite;
+    animation:Gradient 15s ease infinite
+}
+    
+@-webkit-keyframes Gradient{
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}
+
+@-moz-keyframes Gradient{
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}
+
+@keyframes Gradient{
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;right:0;
+    bottom:0;
+    background:#F0BBCB;
+    z-index:1000
+}
+
+.spinner{
+    position:fixed;
+    width:100%;
+    top:70%;
+    height:30px;
+    text-align:center;
+    font-size:10px
+}
+
+.spinner,.spinner-inner{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    border:9px solid white;
+    border-color:transparent white;
+    margin:auto
+}
+
+.spinner{
+    width:85px;
+    height:85px;
+    -webkit-animation:spin 2.2s linear 0s infinite normal;
+    -moz-animation:spin 2.2s linear 0s infinite normal;
+    animation:spin 2.2s linear 0s infinite normal
+}
+
+.spinner-inner{
+    width:40px;
+    height:40px;
+    -webkit-animation:spinback 1.2s linear 0s infinite normal;
+    -moz-animation:spinback 1.2s linear 0s infinite normal;
+    animation:spinback 1.2s linear 0s infinite normal
+}
+
+@-webkit-keyframes spin{
+    from{-webkit-transform:rotate(0)}
+    to{-webkit-transform:rotate(360deg)}
+}
+
+@-moz-keyframes spin{
+    from{-moz-transform:rotate(0)}
+    to{-moz-transform:rotate(360deg)}
+}
+
+@keyframes spin{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+
+@-webkit-keyframes spinback{
+    from{-webkit-transform:rotate(0)}
+    to{-webkit-transform:rotate(-360deg)}
+}
+
+@-moz-keyframes spinback{
+    from{-moz-transform:rotate(0)}
+    to{-moz-transform:rotate(-360deg)}
+}
+
+@keyframes spinback{
+    from{transform:rotate(0)}
+    to{transform:rotate(-360deg)}
+}
+
+#music{
+    text-align:center;
+    grid-column:2;
+    position:relative;
+    z-index:1000;
+    opacity:.4;
+    margin-top:15px
+}
